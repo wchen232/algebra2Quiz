@@ -16,6 +16,8 @@ GUI: Will use JFrame or Swing
 	- 4 buttons
 	- Results screen
 
+Additional functions for previous classes as needed
+
 Other Problem Types(Time Permitting)
 	-Geometry
 	-Trigonometry
