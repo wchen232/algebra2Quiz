@@ -2,14 +2,18 @@ import java.util.*;
 
 public class Quadratics{
     int[] qArray;
+    int neg;
     Random rand;
     //Constructor
     public Quadratics(){
         rand = new Random();
         this.qArray = new int[2];
-
+        neg = 0 + rand.nextInt(2);
         qArray[0] = 1 + rand.nextInt(9);
         qArray[1] = 1 + rand.nextInt(9);
+        if(neg == 0){
+            qArray[1] = (qArray[1] * -1);
+        }
     }
 
     public int[] getqArray() {
@@ -21,11 +25,27 @@ public class Quadratics{
     }
 
     public String getEquation(){
-        return "x^2 + " + (qArray[0] + qArray[1]) + " + " + (qArray[0] * qArray[1]);
+        if(qArray[0]+qArray[1] < 0){
+            return "x^2 - " + (-(qArray[0] + qArray[1])) + " - " + (-qArray[0] * qArray[1]);
+        }
+        else if(neg == 0){
+            return "x^2 + " + (qArray[0] + qArray[1]) + " - " + (-qArray[0] * qArray[1]);
+        }
+        else{
+            return "x^2 + " + (qArray[0] + qArray[1]) + " + " + (qArray[0] * qArray[1]);
+        }
     }
 
     public String getEquation(int i){
-        return i + "x^2 + " + (i*(qArray[0] + qArray[1])) + " + " + (i * qArray[0] * qArray[1]);
+        if(qArray[0]+qArray[1] < 0){
+            return i + "x^2 - " + (-i*(qArray[0] + qArray[1])) + " - " + (-i * qArray[0] * qArray[1]);
+        }
+        else if(neg == 0){
+            return i + "x^2 + " + (i*(qArray[0] + qArray[1])) + " - " + (-i * qArray[0] * qArray[1]);
+        }
+        else {
+            return i + "x^2 + " + (i*(qArray[0] + qArray[1])) + " + " + (i * qArray[0] * qArray[1]);
+        }
     }
 
     public static void main(String args[]){
