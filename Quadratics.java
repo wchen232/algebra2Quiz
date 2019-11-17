@@ -10,13 +10,15 @@ public class Quadratics{
     int neg;
     Random rand;
 
-    //Constructor
+    //Constructor:
     public Quadratics(){
         rand = new Random();
         this.qArray = new int[2];
-        neg = 0 + rand.nextInt(2);
+        //Generates two int values between 1 and 9
         qArray[0] = 1 + rand.nextInt(9);
         qArray[1] = 1 + rand.nextInt(9);
+        //Changes 2nd value into a negative if neg randomly generates as 0
+        neg = 0 + rand.nextInt(2);
         if(neg == 0){
             qArray[1] = (qArray[1] * -1);
         }
@@ -63,7 +65,7 @@ public class Quadratics{
         }
     }
 
-    //Testing
+    /* Testing */
     public static void main(String args[]){
         Quadratics q1 = new Quadratics();
         Quadratics q2 = new Quadratics();
@@ -74,12 +76,12 @@ public class Quadratics{
         System.out.println(q1.getEquation(2));
         System.out.println(q2);
         System.out.println(q2.getEquation());
-        System.out.println(q2.getEquation(2));
+        System.out.println(q2.getEquation(3));
         System.out.println(q3);
         System.out.println(q3.getEquation());
-        System.out.println(q3.getEquation(2));
+        System.out.println(q3.getEquation(4));
         System.out.println(q4);
         System.out.println(q4.getEquation());
-        System.out.println(q4.getEquation(2));
+        System.out.println(q4.getEquation(5));
     }
 }
