@@ -1,9 +1,15 @@
+/**
+    * Class representing a single quadratic equation using the 2 possible values of x
+    * @author Warren Chen
+    * @version 1.0
+ */
 import java.util.*;
 
 public class Quadratics{
     int[] qArray;
     int neg;
     Random rand;
+
     //Constructor
     public Quadratics(){
         rand = new Random();
@@ -16,6 +22,7 @@ public class Quadratics{
         }
     }
 
+    //Getter
     public int[] getqArray() {
         return qArray;
     }
@@ -24,6 +31,10 @@ public class Quadratics{
         return qArray[0] + " or " + qArray[1];
     }
 
+    //Methods
+    /**
+        *@return The quadratic equation as a string
+     */
     public String getEquation(){
         if(qArray[0]+qArray[1] < 0){
             return "x^2 - " + (-(qArray[0] + qArray[1])) + " - " + (-qArray[0] * qArray[1]);
@@ -36,6 +47,10 @@ public class Quadratics{
         }
     }
 
+    /**
+        *@param An int representing the equation's coefficient
+        *@return The quadratic equation as a string
+     */
     public String getEquation(int i){
         if(qArray[0]+qArray[1] < 0){
             return i + "x^2 - " + (-i*(qArray[0] + qArray[1])) + " - " + (-i * qArray[0] * qArray[1]);
@@ -48,6 +63,7 @@ public class Quadratics{
         }
     }
 
+    //Testing
     public static void main(String args[]){
         Quadratics q1 = new Quadratics();
         Quadratics q2 = new Quadratics();
