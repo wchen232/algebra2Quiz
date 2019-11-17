@@ -1,0 +1,13 @@
+Completed Goals:
+
+Created class randomly generating quadratic equations
+	-Class can generate an x values string or equation string
+
+
+WIP- 
+
+Problem Class: Each problem will be instantiated as a separate class
+
+GUI: Will use JFrame or Swing
+	-4 buttons
+	-Results screen
