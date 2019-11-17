@@ -10,13 +10,16 @@ public class Problem{
     Quadratics[] answerArray;
     Random rand = new Random();
 
+    //Constructor
     public Problem(){
-        int corrInt = rand.nextInt(4);
         this.answerArray = new Quadratics[4];
+        //Fill array with Quadratics
         this.answerArray[0] = new Quadratics();
         this.answerArray[1] = new Quadratics();
         this.answerArray[2] = new Quadratics();
         this.answerArray[3] = new Quadratics();
+        //Randomly Choose one as answer
+        int corrInt = rand.nextInt(4);
         this.correctAns = answerArray[corrInt];
     }
 
