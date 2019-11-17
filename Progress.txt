@@ -6,7 +6,7 @@ Quadratics Class:
 	- Class can generate an x values string or equation string
 
 Problem Class: 
-	- Each problem will be instantiated as a separate class
+	- Each problem will be instantiated as an object
 	- Boolean for whether it was answered correctly	
 
 _____________________________________________________________________
@@ -15,3 +15,7 @@ WIP-
 GUI: Will use JFrame or Swing
 	- 4 buttons
 	- Results screen
+
+Other Problem Types(Time Permitting)
+	-Geometry
+	-Trigonometry
