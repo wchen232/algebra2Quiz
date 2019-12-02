@@ -1,23 +1,19 @@
 _____________________________________________________________________
 Completed Goals-
 
-Quadratics Class:
+Quadratics Class (Unused):
 	- Stores two possible x values as an int array
 	- Class can generate an x values string or equation string
 
 Problem Class: 
 	- Each problem will be instantiated as an object
-	- Boolean for whether it was answered correctly	
+	- Has a Question String which will be displayed during a quiz
+	- Has an Answer String which is what will be checked against	
 
-_____________________________________________________________________
-WIP-
-
-GUI: Will use JFrame or Swing
-	- 4 buttons
-	- Results screen
-
-Additional functions for previous classes as needed
-
-Other Problem Types(Time Permitting)
-	-Geometry
-	-Trigonometry
+GUI:
+	-Has create and take quiz options
+	-Text Fields accept for answers for quiz Questions
+	-Text fields accept strings for question/answer for creating quizzes
+	-Quizzes are given and are chosen by filename.
+	-Create quiz generates a text file. 
+	-Has Results screen
