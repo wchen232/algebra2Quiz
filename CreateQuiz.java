@@ -1,7 +1,7 @@
 /**
  * Class with UI to Create new Quizzes as txt files
  * @author Warren Chen
- * @version 2.0
+ * @version 1.0
  */
 import javax.swing.*;
 import java.io.*;
@@ -29,6 +29,8 @@ public class CreateQuiz{
         JButton b2;
         int rec;
 
+        //Recursively calls this UI until i is 1
+        //Original i is taken from Jtextfield in CreateQuiz
         public TeacherQuestionGUI(int i){
             rec = i;
             Jr = new JFrame();

@@ -1,3 +1,8 @@
+/**
+ * Class with UI to Take a quiz chosen by inputted filename
+ * @author Warren Chen
+ * @version 1.0
+ */
 import javax.swing.*;
 import java.io.*;
 import java.awt.*;
@@ -10,11 +15,13 @@ public class TakeQuiz{
     int initialSize;
     int score;
 
+    //Constructor for main class
     public TakeQuiz(){
         new ChooseQuizUI();
         score = 0;
     }
 
+    //Nested for UI to get filename of quiz from user.
     public class ChooseQuizUI extends JFrame{
         JLabel l1;
         JTextField txt1;
@@ -23,6 +30,7 @@ public class TakeQuiz{
         JFrame Jr;
         String fileName;
 
+        //Constructor for UI to get filename of quiz from user
         public ChooseQuizUI(){
             probAl = new ArrayList<Problem>();
             Jr = new JFrame();
@@ -42,7 +50,7 @@ public class TakeQuiz{
             b2.addActionListener(h1);
             Jr.setSize(720,480);
             Jr.setVisible(true);
-        }
+        } //Handler reads the quiz file specified the Arraylist size will be the number of questions in the quiz
         class Handler implements ActionListener{
             public void actionPerformed(ActionEvent e){
                 if(e.getSource().equals(b1)){
@@ -67,6 +75,7 @@ public class TakeQuiz{
         }
     }
 
+    //Nested class for UI for each quiz question
     public class QuestionUI extends JFrame{
         JLabel l1;
         JLabel l2;
@@ -75,7 +84,8 @@ public class TakeQuiz{
         JButton b2;
         JFrame Jr;
         ArrayList<Problem> al;
-
+        //Constructor that sets up the UI
+        //Recursively called until arrlist has one problem object left
         public QuestionUI(ArrayList<Problem> arrlist){
             this.al = arrlist;
             Jr = new JFrame();
@@ -95,7 +105,7 @@ public class TakeQuiz{
             b2.addActionListener(h1);
             Jr.setSize(720,480);
             Jr.setVisible(true);
-        }
+        }//UI Handler
         class QHandler implements ActionListener{
             public void actionPerformed(ActionEvent e){
                 if(e.getSource().equals(b1)){
@@ -121,13 +131,14 @@ public class TakeQuiz{
         }
     }
 
+    //Nested Class for the results UI
     public class FinalScoreUI extends JFrame{
         JLabel l1;
         TextField txt1;
         JButton b1;
         JButton b2;
         JFrame Jr;
-
+        //Constructor that sets up the UI
         public FinalScoreUI(){
             Jr = new JFrame();
             Jr.setLayout(new FlowLayout());

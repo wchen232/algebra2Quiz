@@ -18,6 +18,7 @@ public class Problem{
         //WrongAnswerArray = new String[3];
     }
 
+    //Getters
     public String getProblem() {
         return problem;
     }
